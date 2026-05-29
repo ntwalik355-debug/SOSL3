@@ -3,7 +3,7 @@ import Home from '../views/home.vue'
 import About from '../views/about.vue'
 import Contact from '../views/contact.vue'
 import Place from '../views/place.vue'
-import service from '@/views/service.vue'
+import Service from '@/views/service.vue'
 
 const routes = [{
     path: '/',
@@ -17,6 +17,10 @@ const routes = [{
     path: '/contact',
     name: 'Contact',
     component: Contact
+}, {
+    path: '/services',
+    name: 'Service',
+    component: Service
 }, {
     path: '/place',
     name: 'Place',

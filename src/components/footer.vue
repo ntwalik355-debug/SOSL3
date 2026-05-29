@@ -40,16 +40,14 @@
             <h3 class="text-yellow-300 font-bold text-lg mb-3">contact info</h3>
             <ul class="space-y-2">
                 <li>ahantunyaburanga@gmail.com</li>
-                <il>0784645372</il>
-                <il>kagugu kigali Rwanda</il>
+                <li>0784645372</li>
+                <li>kagugu kigali Rwanda</li>
             </ul>
          </div>
-         <</div>
+        </div>
          <!-- cpyright -->
          <div class="border-t text-sm px-2 py-2">
-
-<p class="text-center">&copy;NTWALI2026 VISIT RWANDA</p>
-
+            <p class="text-center">&copy;NTWALI2026 VISIT RWANDA</p>
          </div>
           
     </footer>
