@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-slate-50 text-slate-900">
-    <section class="relative overflow-hidden bg-cover bg-center" style="background-image: url('/src/assets/image9.jpg.jpg'); min-height: 45vh;">
+    <section class="relative overflow-hidden bg-cover bg-center" :style="{ backgroundImage: `url(${heroBg})`, minHeight: '45vh' }">
       <div class="absolute inset-0 bg-slate-900/65"></div>
       <div class="relative mx-auto flex h-full max-w-7xl items-center px-6 py-24 text-center text-white">
         <div class="w-full">
@@ -28,7 +28,7 @@
 
       <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image5.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${genocideMemorial})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Cultural</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Genocide Memorial</h3>
@@ -41,7 +41,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image6.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${museumImg})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Museum</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">National Museum</h3>
@@ -54,7 +54,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image7.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${nyugweImg})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Nature</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Nyungwe Forest</h3>
@@ -67,7 +67,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image8.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${akageraImg})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Safari</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Akagera National Park</h3>
@@ -80,7 +80,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image10.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${lakeKivuImg})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Scenic</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Lake Kivu</h3>
@@ -93,7 +93,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70">
-          <div class="h-72 bg-[url('/src/assets/image4.jpg.jpg')] bg-cover bg-center"></div>
+          <div class="h-72 bg-cover bg-center" :style="{ backgroundImage: `url(${volcanoesImg})` }"></div>
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Adventure</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Volcanoes National Park</h3>
@@ -108,3 +108,13 @@
     </section>
   </div>
 </template>
+
+<script setup>
+import heroBg from '@/assets/image9.jpg.jpg'
+import genocideMemorial from '@/assets/genocide memorial.jpg'
+import museumImg from '@/assets/museum.jpg'
+import nyugweImg from '@/assets/nyugwe.jpg'
+import akageraImg from '@/assets/akagera.jpg'
+import lakeKivuImg from '@/assets/lake kivu.jpg'
+import volcanoesImg from '@/assets/image 2.jpg.jpg'
+</script>

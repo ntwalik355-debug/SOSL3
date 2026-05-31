@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-slate-50 text-slate-900">
     <section
       class="relative overflow-hidden bg-cover bg-center"
-      style="background-image: url('/src/assets/image11.jpg.jpg'); min-height: 45vh;"
+      :style="{ backgroundImage: `url(${heroBg})`, minHeight: '45vh' }"
     >
       <div class="absolute inset-0 bg-slate-950/70"></div>
       <div class="relative mx-auto flex h-full max-w-7xl items-center px-6 py-24 text-center text-white">
@@ -27,7 +27,7 @@
 
       <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image5.jpg.jpg" alt="Genocide Memorial" class="h-72 w-full object-cover" />
+          <img :src="genocideMemorial" alt="Genocide Memorial" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Memorial</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Genocide Memorial</h3>
@@ -36,7 +36,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image6.jpg.jpg" alt="Rwanda Museum" class="h-72 w-full object-cover" />
+          <img :src="museumImg" alt="Rwanda Museum" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Culture</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">National Museum</h3>
@@ -45,7 +45,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image7.jpg.jpg" alt="Nyungwe Forest" class="h-72 w-full object-cover" />
+          <img :src="nyugweImg" alt="Nyungwe Forest" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Nature</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Nyungwe Forest</h3>
@@ -54,7 +54,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image8.jpg.jpg" alt="Akagera National Park" class="h-72 w-full object-cover" />
+          <img :src="akageraImg" alt="Akagera National Park" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Safari</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Akagera Park</h3>
@@ -63,7 +63,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image10.jpg.jpg" alt="Lake Kivu" class="h-72 w-full object-cover" />
+          <img :src="lakeKivuImg" alt="Lake Kivu" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Scenic</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Lake Kivu</h3>
@@ -72,7 +72,7 @@
         </article>
 
         <article class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/70 transition hover:-translate-y-1 hover:shadow-2xl">
-          <img src="/src/assets/image4.jpg.jpg" alt="Volcanoes National Park" class="h-72 w-full object-cover" />
+          <img :src="volcanoesImg" alt="Volcanoes National Park" class="h-72 w-full object-cover" />
           <div class="p-6">
             <p class="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-600">Adventure</p>
             <h3 class="mt-4 text-2xl font-bold text-slate-900">Volcanoes Park</h3>
@@ -90,7 +90,7 @@
 
         <div class="mt-8 grid gap-6 md:grid-cols-2">
           <div class="relative overflow-hidden rounded-[2rem] bg-slate-900 text-white shadow-lg">
-            <img src="/src/assets/image8.jpg.jpg" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
+            <img :src="image8" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="rounded-full bg-white/90 p-4 text-slate-950">
                 ▶
@@ -103,7 +103,7 @@
           </div>
 
           <div class="relative overflow-hidden rounded-[2rem] bg-slate-900 text-white shadow-lg">
-            <img src="/src/assets/image2.jpg.jpg" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
+            <img :src="image2" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="rounded-full bg-white/90 p-4 text-slate-950">
                 ▶
@@ -119,3 +119,14 @@
     </section>
   </div>
 </template>
+
+<script setup>
+import heroBg from '@/assets/image11.jpg.jpg'
+import genocideMemorial from '@/assets/genocide memorial.jpg'
+import museumImg from '@/assets/museum.jpg'
+import nyugweImg from '@/assets/nyugwe.jpg'
+import akageraImg from '@/assets/akagera.jpg'
+import lakeKivuImg from '@/assets/lake kivu.jpg'
+import volcanoesImg from '@/assets/image 2.jpg.jpg'
+import image2 from '@/assets/image 2.jpg.jpg'
+</script>

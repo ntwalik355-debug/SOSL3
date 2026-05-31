@@ -21,7 +21,7 @@
           </p>
 
           <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:justify-center">
-            <a href="#" class="inline-flex items-center justify-center rounded-full bg-yellow-500 px-8 py-3 stext-base font-semibold text-white transition hover:bg-emerald-400">
+            <a href="/destination" class="inline-flex items-center justify-center rounded-full bg-yellow-500 px-8 py-3 text-base font-semibold text-white transition hover:bg-emerald-400">
               Explore Destinations
             </a>
             <a href="/about" class="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 px-8 py-3 text-base font-semibold text-white transition hover:bg-white/20">
@@ -72,7 +72,7 @@
 
         <div class="grid gap-8 lg:grid-cols-3">
           <div class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/50">
-            <img src="@/assets/image7.jpg.jpg" alt="Volcanoes" class="h-72 w-full object-cover" />
+            <img src="@/assets/image 2.jpg.jpg" alt="Volcanoes" class="h-72 w-full object-cover" />
             <div class="p-8">
               <h3 class="text-2xl font-semibold text-slate-900">Volcanoes National Park</h3>
               <p class="mt-4 text-slate-600 leading-7">Track mountain gorillas and enjoy lush landscapes in one of Africa’s most iconic wildlife reserves.</p>
@@ -80,7 +80,7 @@
           </div>
 
           <div class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/50">
-            <img src="@/assets/image9.jpg.jpg" alt="Lake Kivu" class="h-72 w-full object-cover" />
+            <img src="@/assets/lake kivu.jpg" alt="Lake Kivu" class="h-72 w-full object-cover" />
             <div class="p-8">
               <h3 class="text-2xl font-semibold text-slate-900">Lake Kivu Retreats</h3>
               <p class="mt-4 text-slate-600 leading-7">Relax along scenic shores, enjoy sunset cruises, and discover peaceful islands on Rwanda’s western lakeshore.</p>
@@ -88,7 +88,7 @@
           </div>
 
           <div class="overflow-hidden rounded-[2rem] bg-white shadow-xl shadow-slate-200/50">
-            <img src="@/assets/image11.jpg.jpg" alt="Kigali city" class="h-72 w-full object-cover" />
+            <img src="@/assets/local food.jpg" alt="Kigali city" class="h-72 w-full object-cover" />
             <div class="p-8">
               <h3 class="text-2xl font-semibold text-slate-900">Kigali Culture & Cuisine</h3>
               <p class="mt-4 text-slate-600 leading-7">Explore the vibrant capital with street food, museums, and boutique market experiences.</p>
