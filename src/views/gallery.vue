@@ -90,12 +90,7 @@
 
         <div class="mt-8 grid gap-6 md:grid-cols-2">
           <div class="relative overflow-hidden rounded-[2rem] bg-slate-900 text-white shadow-lg">
-            <img :src="image8" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="rounded-full bg-white/90 p-4 text-slate-950">
-                ▶
-              </div>
-            </div>
+            <video :src="video1" class="h-72 w-full object-cover" controls playsinline preload="metadata"></video>
             <div class="p-6">
               <h3 class="text-xl font-semibold">Rwanda Highlights</h3>
               <p class="mt-3 text-slate-300">A quick tour through cities, parks, and lakes.</p>
@@ -103,12 +98,7 @@
           </div>
 
           <div class="relative overflow-hidden rounded-[2rem] bg-slate-900 text-white shadow-lg">
-            <img :src="image2" alt="Video preview" class="h-72 w-full object-cover opacity-80" />
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="rounded-full bg-white/90 p-4 text-slate-950">
-                ▶
-              </div>
-            </div>
+            <video :src="video2" class="h-72 w-full object-cover" controls playsinline preload="metadata"></video>
             <div class="p-6">
               <h3 class="text-xl font-semibold">Nature & Wildlife</h3>
               <p class="mt-3 text-slate-300">Experience Rwanda’s forests, lakes, and safari regions.</p>
@@ -128,5 +118,10 @@ import nyugweImg from '@/assets/nyugwe.jpg'
 import akageraImg from '@/assets/akagera.jpg'
 import lakeKivuImg from '@/assets/lake kivu.jpg'
 import volcanoesImg from '@/assets/image 2.jpg.jpg'
-import image2 from '@/assets/image 2.jpg.jpg'
+
+// Video files (place MP4 files in src/videos):
+// - src/videos/rwanda-highlights.mp4
+// - src/videos/nature-wildlife.mp4
+const video1 = new URL('../videos/rwanda-highlights.mp4', import.meta.url).href
+const video2 = new URL('../videos/nature-wildlife.mp4', import.meta.url).href
 </script>
