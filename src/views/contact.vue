@@ -11,16 +11,6 @@
           <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm uppercase tracking-[0.35em] text-emerald-300 shadow-sm shadow-slate-950/20">
             {{ t.heroTop }}
           </span>
-          <div class="flex items-center gap-3 rounded-3xl bg-white/10 px-4 py-3 text-sm text-white shadow-lg shadow-slate-950/20 backdrop-blur-sm">
-            <label for="language" class="font-semibold text-slate-100">{{ t.languageLabel }}:</label>
-            <select
-              id="language"
-              v-model="selectedLang"
-              class="rounded-full border border-white/20 bg-slate-900/80 px-3 py-2 text-white outline-none transition duration-200 hover:border-emerald-200"
-            >
-              <option v-for="(label, code) in languageOptions" :key="code" :value="code">{{ label }}</option>
-            </select>
-          </div>
         </div>
 
         <div class="mx-auto max-w-4xl rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-2xl shadow-slate-950/20 backdrop-blur-sm">
@@ -117,132 +107,10 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, inject } from 'vue'
 
-const selectedLang = ref('en')
+const language = inject('language')
+const translations = inject('translations')
 
-const languageOptions = {
-  en: 'English',
-  fr: 'Français',
-  rw: 'Kinyarwanda',
-}
-
-const translations = {
-  en: {
-    languageLabel: 'Language',
-    heroTop: 'Contact Tembera Rwanda',
-    heroTitle: 'Let’s plan your next Rwanda adventure.',
-    heroDesc:
-      'Reach out for bookings, tour recommendations, travel support, or local guides. We’re ready to help you explore Rwanda with comfort and confidence.',
-    sectionTop: 'Get in touch',
-    sectionTitle: 'We’re here for every question.',
-    sectionDesc:
-      'Whether you need help planning accommodation, booking a tour, or arranging transportation, our team is ready to create a custom itinerary for your Rwanda journey.',
-    cards: {
-      email: {
-        title: 'Email',
-        description: 'We aim to reply within 24 hours.',
-      },
-      phone: {
-        title: 'Phone',
-        description: 'Available Monday to Saturday.',
-      },
-      location: {
-        title: 'Location',
-        description: 'Central office near Kigali city center.',
-      },
-      support: {
-        title: 'Support',
-        description: 'For travel and itinerary assistance.',
-      },
-    },
-    formTitle: 'Quick message',
-    formSubtitle: 'Ask us anything',
-    labelName: 'Your name',
-    placeholderName: 'Enter your full name',
-    labelEmail: 'Your email',
-    placeholderEmail: 'Enter your email address',
-    labelMessage: 'Message',
-    placeholderMessage: 'Describe your travel plans or questions',
-    formButton: 'Send message',
-  },
-  fr: {
-    languageLabel: 'Langue',
-    heroTop: 'Contactez Tembera Rwanda',
-    heroTitle: 'Préparons votre prochaine aventure au Rwanda.',
-    heroDesc:
-      'Contactez-nous pour les réservations, recommandations de circuits, assistance de voyage ou guides locaux. Nous sommes prêts à vous aider à explorer le Rwanda avec confort et confiance.',
-    sectionTop: 'Entrer en contact',
-    sectionTitle: 'Nous sommes là pour chaque question.',
-    sectionDesc:
-      'Que vous ayez besoin d’aide pour planifier un hébergement, réserver une visite ou organiser un transport, notre équipe est prête à créer un itinéraire personnalisé pour votre voyage au Rwanda.',
-    cards: {
-      email: {
-        title: 'Email',
-        description: 'Nous visons à répondre sous 24 heures.',
-      },
-      phone: {
-        title: 'Téléphone',
-        description: 'Disponible du lundi au samedi.',
-      },
-      location: {
-        title: 'Localisation',
-        description: 'Bureau central près du centre-ville de Kigali.',
-      },
-      support: {
-        title: 'Assistance',
-        description: 'Pour l’aide au voyage et à l’itinéraire.',
-      },
-    },
-    formTitle: 'Message rapide',
-    formSubtitle: 'Posez-nous une question',
-    labelName: 'Votre nom',
-    placeholderName: 'Entrez votre nom complet',
-    labelEmail: 'Votre email',
-    placeholderEmail: 'Entrez votre adresse email',
-    labelMessage: 'Message',
-    placeholderMessage: 'Décrivez votre projet de voyage ou vos questions',
-    formButton: 'Envoyer le message',
-  },
-  rw: {
-    languageLabel: 'Ururimi',
-    heroTop: 'Vugana na Tembera Rwanda',
-    heroTitle: 'Tegura urugendo rwawe rutaha mu Rwanda.',
-    heroDesc:
-      'Hamagara kubijyanye no kwitabira, inama z’utembera, ubufasha mu ngendo, cyangwa abayobozi b’ahantu. Turi ready kugufasha gusura u Rwanda mu bwisanzure no mu mutekano.',
-    sectionTop: 'Twandikire',
-    sectionTitle: 'Turi hano kuri buri kibazo.',
-    sectionDesc:
-      'Niba ukeneye ubufasha mu gutegura icumbi, gufata urugendo, cyangwa gutegura gutwara, itsinda ryacu ryiteguye gukora urugendo rwihariye ku rugendo rwawe mu Rwanda.',
-    cards: {
-      email: {
-        title: 'Email',
-        description: 'Turagerageza gusubiza mu masaha 24.',
-      },
-      phone: {
-        title: 'Telefoni',
-        description: 'Iri ku murongo kuva ku wa mbere kugeza ku wa gatandatu.',
-      },
-      location: {
-        title: 'Aho turi',
-        description: 'Ibiro bya Kigali hafi y’umujyi.',
-      },
-      support: {
-        title: 'Inkunga',
-        description: 'Kubijyanye n’ubufasha mu ngendo no gutegura gahunda.',
-      },
-    },
-    formTitle: 'Ubutumwa vuba',
-    formSubtitle: 'Tubaze icyo ushaka',
-    labelName: 'Izina ryawe',
-    placeholderName: 'Andika izina ryawe ryuzuye',
-    labelEmail: 'Email yawe',
-    placeholderEmail: 'Andika aderesi ya email yawe',
-    labelMessage: 'Ubutumwa',
-    placeholderMessage: 'Sobanura gahunda yawe y’urugendo cyangwa ibibazo ufite',
-    formButton: 'Ohereza ubutumwa',
-  },
-}
-
-const t = computed(() => translations[selectedLang.value])
+const t = computed(() => translations.contact[language.value])
 </script>

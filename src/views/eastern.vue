@@ -1,7 +1,7 @@
 <template>
   <main class="bg-slate-50 text-slate-900">
     <section class="relative overflow-hidden bg-slate-900 text-white">
-      <img src="@/assets/image8.jpg.jpg" alt="Eastern Rwanda" class="absolute inset-0 h-full w-full object-cover opacity-75" />
+      <img src="@/assets/nyugwe.jpg" alt="Eastern Rwanda" class="absolute inset-0 h-full w-full object-cover opacity-75" />
       <div class="relative mx-auto flex min-h-[55vh] max-w-7xl flex-col justify-center px-6 py-24 sm:px-8 lg:px-12">
         <p class="inline-flex rounded-full bg-emerald-500/15 px-4 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200">Eastern Rwanda</p>
         <h1 class="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">Explore Akagera and the eastern savanna.</h1>
